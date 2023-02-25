@@ -1,45 +1,73 @@
 
-
-// 1
-let number="100";
-number2="2.5";
-let isMale =false;
-let greetings ="Hello, java script!";
-console.log(number,number2,isMale,greetings);
+//1
+function SumNegative(arr){
+  let sum = 0;
+  for(let i = 0; i < arr.length; i++) 
+if(arr[i] < 0)
+  sum += arr[i];
+  return sum;
+}
+let k = [1, -2, 3, -4, 5, -6, -7, 8];
+console.log(SumNegative(k));
 
 // 2
-let greeting="Hi, "
-let userName = "Vasya"
-console.log(greeting,userName,"!")
+function zeroReplacement(a) {
+  for (let u = 0; u <= a.length; u++) {
+    if (a[u] < 0) {
+      a[u] = 0;
+    }
+  }
+  return a;
+}
+
+let j = [1, -2, 3, -4, 5, -6, -7, 8];
+
+console.log(zeroReplacement(j))
+
 
 // 3
-for(let i = 10;
-    i <= 50; 
-    i=i+5) {
-       console.log(i)
+
+function product (l) {
+  let prod = 1;
+  for (let o = 0; o < l.length; o++) {
+    if(l[o] > 0 && l[o] < 10) {
+      prod = prod * l[o];
     }
-// 4
-let monthnumber=prompt('what is the month number');
-if(monthnumber<=2)
-{console.log("winther");
-} else if(monthnumber<=5)
-{console.log("spring");
-} else if(monthnumber<=8)
-{console.log("summer");
-} else if(monthnumber==12)
-{console.log("winther");
-}  else if(monthnumber<=11)
-{console.log("autumn");
-}  else 
-{console.log("error");
+  }
+  return prod;
 }
 
+let t = [1, 3, -4, 5, -6, -7, 13];
 
-// 5
-val =1;
-let result = 0;
-while(val<=100){
-    result=result+val;
-    val=val+2; 
+console.log('результат', product(t));
+
+ //4
+
+ function getZeroIndexes (l) {
+  let n = [];
+  for(let i = 0; i <= l.length; i++) {
+    if (l[i] == 0) {
+      n.push(i);
+    }
+  }
+  return n;
 }
-console.log(result);
+
+let p = [0, 6, 0, 5, -6, 0, 13];
+
+console.log('res', getZeroIndexes(p));
+
+//5
+
+function firstNElem(e, n) {
+  let newArray = [];
+  for (let i = 0; i < n; i++) {
+    newArray.push(t[i]);
+  }
+  return newArray;
+}
+
+let n = 3;
+let e = [13, 45, 187, 44, 65, 198, 564, 234, 1234, 987];
+
+console.log('result', firstNElem(e, n));
